@@ -1,0 +1,130 @@
+.advantages
+	position relative
+	background-image url("../images/bbbg.jpg")
+	background-size cover 
+	color white
+	font-family "GothamProLight"
+	padding-right 300px
+	+below(lg)
+		padding-right 75px
+	+below(sm)
+		padding-right 15px
+	&__title 
+		color white
+	&__list-wrapper
+		position relative
+	&__list
+		display flex
+		align-items flex-start
+		justify-content space-between
+		margin-top 5em
+		margin-bottom 5em
+		margin-left 0
+		margin-right 0
+		font-size 16px
+		font-weight 300
+		margin-top 30px
+		margin-bottom 55px
+		+above(xl)
+			font-size 18px
+		+below(sm)
+			margin-left 0
+	&__item
+		display flex 
+		flex-direction column
+		align-items center
+		padding 20px
+		width 20%
+		position relative
+		color white 
+		transition all .2s ease-int-out
+		text-decoration none
+		+below(md)
+			width 100%
+		&:hover, &:focus
+			color rgba(255, 255, 255, .8)
+			.advantages__item-pic
+				background-color rgba(255, 255, 255, 1)
+				svg 
+					fill #1D68D9
+					transition all .2s ease-int-out
+					
+		&:before
+			content ''
+			width 20px
+			height 1px
+			position absolute
+			right -10px
+		&-pic
+			background-image url('../images/circle-bg.svg')
+			background-size contain
+			background-repeat no-repeat
+			background-color rgba(255, 255, 255, 0)
+			width 100px
+			height 100px 
+			margin-bottom 15px
+			display flex
+			align-items center
+			justify-content center		
+			transition all .2s ease-int-out
+			border-radius 50%
+			svg
+				height 60px
+				width 60px
+				fill white
+				transition all .2s ease-int-out
+		&-text
+			font-size 18px
+			text-transform uppercase
+			font-weight 500
+			text-align center
+			font-family "GothamProBold"
+			+below(lg)
+				font-size 16px
+			+below(md)
+				font-size 14px
+		&:not(:last-child)
+			margin-right 20px
+			&:before
+				content ''
+				width 80px
+				height 1px
+				position absolute
+				right -40px
+				top 70px
+				background-color white
+	.owl-arrow-left, .owl-arrow-right
+		display none
+		position absolute!important
+		bottom 50%
+		z-index 5
+		+below(md)
+			display block
+	.owl-arrow-left
+		arrow(1px, currentColor, 15px, 30px, 'left')
+		left 0
+		&.disabled
+			opacity .3
+	.owl-arrow-right
+		arrow(1px, currentColor, 15px, 30px, 'left')
+		transform rotate(180deg)
+		right 0
+		&.disabled
+			opacity .3
+	&__decor
+		width 280px
+		height 280px
+		position absolute
+		background-image url("/assets/images/decor.svg")
+		background-size contain
+		background-repeat no-repeat
+		top -55px
+		right -65px
+		&--bottom
+			top auto
+			bottom -55px
+			right auto
+			left - 65px
+			transform rotate(180deg)
+		
+			

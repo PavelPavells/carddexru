@@ -1,0 +1,47 @@
+.breadcrumbs
+    position relative
+    z-index 100
+    margin-bottom 55px
+    &__list
+        list-style none
+        margin 0px
+        padding 0px
+    &__item
+        margin 0px
+        padding 0px
+        // padding-bottom 5px
+        font-size 14px
+        line-height unit(19/@font-size, em)
+        display inline-block
+        color #c4c4c4
+        margin-right 3px        
+        +above(xl)
+            font-size 16px
+            line-height unit(22/@font-size, em)
+        &:not(:last-child)
+            position relative
+            &:before, &:after
+                content ''
+                position absolute
+                right 20px
+                width 8px
+                height 1px
+                background-color #BCCBD7
+                top 50%
+            &:before
+                transform rotate(45deg) translateY(-4px)
+            &:after
+                transform rotate(-45deg) translateY(4px)        
+        &:last-child
+            +below(sm)
+                display none        
+    &__link
+        border 0px
+        margin-right 3px
+        text-decoration none
+        margin-right 40px
+        font-size 12px 
+        color #191E22
+    a
+        &:hover
+            text-decoration underline

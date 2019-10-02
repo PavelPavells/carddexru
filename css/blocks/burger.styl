@@ -1,0 +1,108 @@
+$burger-size = 30px
+$burger-burger = rgba(59,124,170,0.35)
+$burger-cross = #d0d0d0
+$burger-thickness = 4px
+$burger-anim-time = 0.3s
+$burger-anim-effect = ease-out
+$burger-padding = ($burger-size - $burger-thickness) / 2
+.burger-button
+  user-select: none
+  display: block
+  width: $burger-size
+  height: $burger-size
+  background-color: $burger-burger
+  background-clip: content-box
+  padding: $burger-padding 0
+  position: relative
+  &:after,
+  &:before
+    display: block
+    content: ""
+    width: $burger-size
+    height: $burger-thickness
+    background-color: inherit
+    position: absolute
+  &:after
+    transform: translate3d(0, $burger-padding, 0)
+  &:before
+    transform: translate3d(0, -1 * $burger-padding, 0)
+.goto-burger
+  animation: gotoBurger-all $burger-anim-time $burger-anim-effect forwards
+  &:before
+    animation: gotoBurger-before $burger-anim-time $burger-anim-effect forwards
+  &:after
+    animation: gotoBurger-after $burger-anim-time $burger-anim-effect forwards
+.goto-cross
+  animation: gotoCross-all $burger-anim-time $burger-anim-effect forwards
+  &:before
+    animation: gotoCross-before $burger-anim-time $burger-anim-effect forwards
+  &:after
+    animation: gotoCross-after $burger-anim-time $burger-anim-effect forwards
+
+@keyframes gotoBurger-all  {
+  0% {
+    transform: translate3d(0,0,0) rotate(315deg);
+    background-color: $burger-cross;
+  }
+  100% { 
+    transform: translate3d(0,0,0) rotate(720deg);
+    background-color: $burger-burger;
+  }
+}
+@keyframes gotoBurger-before  {
+  0% {
+    transform: translate3d(0,0,0);
+  }
+  60% { 
+    transform: translate3d(0,0,0);
+  }
+  100% { 
+    transform: translate3d(0,-1*$burger-padding,0);
+  }
+}
+@keyframes gotoBurger-after  {
+  0% {
+    transform: translate3d(0,0,0) rotate(90deg);
+  }
+  60% { 
+    transform: translate3d(0,0,0) rotate(180deg);
+  }
+  100% { 
+    transform: translate3d(0,$burger-padding,0) rotate(180deg);
+  }
+}
+
+@keyframes gotoCross-before  {
+  0% {
+    transform: translate3d(0,-1*$burger-padding,0);
+  }
+  30% { 
+    transform: translate3d(0,0,0);
+  }
+  100% { 
+    transform: translate3d(0,0,0);
+  }
+}
+@keyframes gotoCross-after  {
+  0% {
+    transform: translate3d(0,$burger-padding,0);
+  }
+  30% { 
+    transform: translate3d(0,0,0);
+  }
+  100% { 
+    transform: translate3d(0,0,0) rotate(90deg);
+  }
+}
+@keyframes gotoCross-all  {
+  0% {
+    transform: translate3d(0,0,0) rotate(0deg);
+    background-color: $burger-burger;
+  }
+  100% { 
+    transform: translate3d(0,0,0) rotate(315deg);
+    background-color: $burger-cross;
+  }
+}
+
+

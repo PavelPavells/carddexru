@@ -1,0 +1,154 @@
+$menu-hover-blue = #1D68D9
+
+.header
+	display flex
+	align-items center
+	padding 0 25px 
+	padding-right 75px
+	background-color #fff
+	z-index 10
+	border-bottom 1px solid #E8E8E8
+	justify-content space-between
+	width 100%
+	position fixed
+	top 0 
+	opacity 1
+	transform translateY(0)
+	transition transform .2s ease-in-out, opacity .2s ease-in-out
+	height 90px
+	+below(sm)
+		padding 15px
+		box-shadow 0 0 5px #dbdbdb
+		height auto
+	+below(md)
+		padding-right 25px
+	+below(lg)
+		padding-right 50px
+	&__logo
+		padding 3px
+		height 40px
+		flex-shrink 0
+		+below(1350px)
+			height 32px
+		&.mobile-hidden
+			display none
+			+above(sm)
+				display block
+		img 
+			height 100%
+			width auto
+		
+	&__menu 
+		min-height 100%
+		align-self stretch
+		display flex
+		flex-direction column
+		height 100%
+		+below(sm)
+			display none
+	&__menu-list
+		display flex
+		font-family 'GothamProRegular'
+		font-size 14px 
+		align-items center
+		// flex-wrap wrap
+		height 100%
+		padding-x 1.5em
+		+below(1400px)
+			padding-x 1em
+		+above(1900px)
+			font-size 16px
+		+below(1300px)
+			font-size 12px
+
+	&__menu-item
+		height 100%
+		display flex
+		flex-direction column
+		align-items center
+		&:last-child .header__menu-link 
+			margin-right 0
+	&__menu-link
+		color #34322f
+		text-decoration none
+		border-bottom none
+		height 100%
+		padding-x .5em
+		margin-right 2em
+		border-bottom 2px solid transparent
+		display flex
+		flex-direction column
+		justify-content center
+		+below(md)
+			margin-right 1em
+		+below(1400px)
+			margin-right .5em
+		+below(1100px)
+			margin-right .3em
+		+below(1050px)
+			margin-right .1em
+		
+		&:hover, &:focus, &.active
+			// text-decoration underline
+			color currentColor
+			border-bottom 2px solid $menu-hover-blue
+
+			
+	&__phone-block
+		flex-shrink 0
+		display flex
+		align-items center
+		+below(md)
+			flex-direction column
+			align-items flex-end
+		+below(sm)
+			margin-left auto
+			margin-right 15px
+		+below(500px)
+			display none
+		&.mobile-visible
+			display flex
+			margin-left 0
+			+above(sm)
+				margin-left auto
+		a
+			display flex
+			align-items center
+			text-decoration none
+			&:not(:last-child)
+				margin-right 1em
+				+below(md)
+					margin-right 0
+		a.header__callback
+			color #8B9298
+			font-size 16px
+			text-decoration underline
+			+below(lg)
+				font-size 14px
+			+below(lg)		
+				font-size 13px
+	&__phone 
+		font-family 'GothamProLight'
+		font-size 24px 
+		+below(lg)
+			font-size 20px
+		+below(sm)
+			font-size 16px
+		+below(1200px)
+			font-size 14px 
+		+below(960px)
+			font-size 16px 
+	.burger-button
+		outline none
+		border-color transparent
+		display inline
+		cursor pointer
+		flex-shrink 0
+		+above(md)
+			display none
+	.burger-button, .burger-button:before, .burger-button:after
+		box-sizing border-box
+	.desktop-burger
+		burger(2px, 5px, $menu-hover-blue, 22px) 
+		
+

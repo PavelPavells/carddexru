@@ -1,0 +1,71 @@
+.mobile
+	position fixed
+	top 0 
+	left 0
+	height 100vh
+	width 100%
+	padding-top 60px
+	background-color #fff
+	display none
+	flex-direction column
+	&.mobile-visible
+		display flex
+	&__menu-wrapper
+		padding 15px
+		flex-grow 5
+		border-bottom 1px solid $grey
+		overflow-x scroll
+		position relative
+	&__menu-list
+		display flex
+		font-family 'GothamProRegular'
+		flex-direction column
+		font-size 16px 
+		align-items flex-end 
+		padding 0 15px
+		flex-wrap wrap
+		+above(1600px)
+			font-size 15px
+	&__menu-item
+		margin-top 10px
+		margin-bottom 10px
+	&__menu-link
+		color #34322f
+		text-decoration none
+		border-bottom none
+		text-transform uppercase
+		border-bottom 1px solid currentColor
+		&:hover, &:focus
+			text-decoration underline
+			color currentColor
+		&.active
+			font-weight bold
+	&__cat-wrapper
+		min-height 130px
+		position relative 
+		margin-bottom 80px
+		border-bottom 1px solid $grey
+	&__cat-list
+		padding 15px
+		display inline-flex 
+		align-items flex-start
+		text-align center
+		height 100%
+	&__cat-item
+		margin 0 15px
+		max-width 100px
+	&__cat-link
+		display flex
+		flex-direction column
+		align-items center
+		&-icon
+			width 25px 
+			height 25px
+			margin-bottom 5px
+		&-text
+			font-size 14px
+			font-family 'GothamProRegular'
+			font-weight 400
+			+above(xl)
+				font-size 14px
+		

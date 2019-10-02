@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+    @@include('../blocks/head.html', {
+        "title": "Carddex"
+    })
+
+</head>
+<body>
+    <div class="body">
+        @@include('../blocks/header.html')
+        @@include('../blocks/sidebar.html')
+        @@include('../blocks/progress-pointer.html')
+        <div class="body__content">
+            <div class="before"></div>
+			@@include("../blocks/barrier.html")
+            @@include("../blocks/footer.html")    
+        </div>
+    </div>
+
+
+    @@include("../blocks/append.html")
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=6bd060c5-87ff-42bf-a4b4-0af75aea5ba6&lang=ru_RU" type="text/javascript"></script>
+</body>
+</html>
+

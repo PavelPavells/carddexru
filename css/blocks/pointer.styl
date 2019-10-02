@@ -1,0 +1,112 @@
+.pointer
+	position fixed
+	right 37px
+	height 100vh
+	opacity 1
+	top 0
+	width 1px 
+	background-color transparent
+	// display flex
+	// flex-direction column 
+	// align-items flex-end
+	// display none
+	transition all .5s ease-in-out
+	+below(lg)
+		right 25px
+	+below(md)
+		right 20px
+	+below(sm)
+		display none!important
+	
+	&:before
+		content ''
+		position absolute
+		width 100%
+		height 45%
+		top 0
+		background-color rgba(229, 229, 229, .5)
+	&:after
+		// content ''
+		position absolute
+		width 100%
+		height 45%
+		bottom 0
+		background-color rgba(229, 229, 229, .5)
+	&__counter
+		position absolute
+		top 50%
+		transform translate(-50%, -50%)
+		display flex 
+		flex-direction column 
+		align-items center
+	&__total
+		transition all .5s ease-in-out
+	&__current
+		transition all .5s ease-in-out
+		color #D03839
+		position relative
+		&:before
+			content ''
+			width 25px
+			background-color #F4CCC8 
+			bottom 2px
+			position absolute 
+			height 6px
+			left 50%
+			transform translateX(-50%)
+			z-index 0
+			transition all .5s ease-in-out
+		span 
+			position relative
+	&__mouse
+		position absolute
+		top 55%
+		width 1px
+		display flex 
+		flex-direction column
+		align-items center
+	&__bottom-stick
+		width 1px
+		background-color #F4CCC8
+		background-color rgba(229, 229, 229, .5)
+		height 1000px
+	&__mouse-stick
+		transition all .5s ease-in-out
+		width 1px
+		background-color #F4CCC8
+		height 85px
+		&.expanded
+			height 95px	
+	&__mouse-body
+		transition all .5s ease-in-out
+		width 20px 
+		height 32px 
+		border 1px solid black
+		border-radius 10px
+		position relative 
+		&:before
+			content ''
+			top 8px 
+			left 7.5px
+			position absolute
+			width 4px
+			height 4px
+			background-color #D03839
+			border-radius 50%
+			// transform translate(-50%, -50%)
+			transition all .5s ease-in-out
+	&.white
+		.pointer__mouse-stick
+			background-color white
+		.pointer__current
+			color white
+			&:before
+				background-color white
+				height 2px
+				bottom 0
+		.pointer__total
+			color white		
+		.pointer__mouse-body
+			border-color white
+			&:before
+				background-color white

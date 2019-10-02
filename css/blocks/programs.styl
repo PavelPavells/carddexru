@@ -1,0 +1,218 @@
+.programs
+	&__title
+		margin-top 1em
+	&__text 
+		font-weight 500
+		p 
+			font-weight 500
+	&__slider
+		position relative
+	&__slider-list
+		display flex
+		
+		margin 0
+	&__slide
+		margin 0
+		list-style-type none
+		width 100%
+	.p-slide
+		width 100%
+		flex-shrink 0
+		&__body
+			set('padding-x', 50px n 60px n 80px)
+			set('padding-y', 25px n 30px n 80px)
+			set('height', 350px n 300px n 350px)
+			background linear-gradient(135deg, rgba(168,49,247,0.35) 0%,rgba(125,185,232,0.35) 100%)
+			display flex
+			justify-content space-between
+			+below(sm)
+				flex-direction column
+				justify-content start
+		&__text
+			margin-right 4em
+			display flex
+			flex-direction column
+			justify-content center
+			+below(sm)
+				margin-right 0
+				margin-bottom 1em
+		&__title
+			margin 0
+			margin-bottom 1em
+			&:before 
+				display none
+			+below(sm)
+				margin-bottom 1em
+				font-size 1.2em
+		&__action 
+			display flex
+			align-items center
+			.btn-primary
+				background-color white
+				font-size 1.4em
+				margin-top 0
+				&:hover
+					background-color #f1f1f1
+				+below(sm)
+					font-size 1em
+	&__links-row
+		display flex 
+		flex-wrap wrap
+		justify-content space-between
+		border-bottom 1px solid $lightgrey
+		padding-bottom 1em
+		padding-top 1em
+		font-weight 500
+	&__links-col
+		display flex
+		align-items center
+		width 48%
+		+below(xs)
+			width 100%	
+			&:first-child
+				margin-bottom 1em
+		.icon
+			margin-right .2em
+	&__dash
+		margin-left 1em
+		margin-right 1em
+		border-bottom 1px dashed $lightgrey
+		flex-grow 10
+	&__link-btn
+		margin-left auto
+		.btn-primary
+			margin-top 0
+	.owl-arrow-left, .owl-arrow-right
+		position absolute!important
+		bottom 50%
+		z-index 5
+		cursor pointer
+		+below(md)
+			display block
+	.owl-arrow-left
+		arrow(4px, black, 15px, 30px, 'left')
+		transform translateY(50%)
+		left 10px
+		&.disabled
+			opacity .3
+			cursor default
+	.owl-arrow-right
+		arrow(4px, black, 15px, 30px, 'left')
+		transform rotate(180deg) translateY(-50%)
+		right 10px
+		&.disabled
+			opacity .3
+			cursor default
+	.owl-dots
+		position absolute
+		bottom 0
+		left 50%
+		transform translateX(-50%)
+		display flex 
+	.owl-dot
+		width 10px
+		height 10px
+		background-color white
+		border 2px solid white
+		border-radius 50%
+		margin 10px
+		&.active
+			border-color $blue
+			
+.p-advantages
+	padding-top 0
+	&__list
+		display flex 
+		flex-wrap wrap
+		justify-content space-between
+		font-weight 500
+		margin 0
+	&__item
+		width 48%
+		list-style-type none
+		display flex 
+		align-items center
+		&:before
+			content ''
+			width 10px
+			height 10px
+			border-radius 50%
+			background-color #b4ccdc
+			flex-shrink 0
+			flex-basis 10px
+			margin-right 10px
+		+below(xs)
+			width 100%
+.p-requirments
+	padding-top 0
+	&__list
+		display flex 
+		flex-wrap wrap
+		justify-content space-between
+		font-weight 500
+		margin 0
+	&__item
+		width 48%
+		list-style-type none
+		display flex 
+		align-items center
+		&:before
+			content ''
+			width 10px
+			height 10px
+			border-radius 50%
+			background-color #b4ccdc
+			flex-shrink 0
+			flex-basis 10px
+			margin-right 10px
+		+below(xs)
+			width 100%
+			
+.ui
+	padding-top 0
+	&__title 
+		margin-bottom .6em
+	&__block
+		padding-top 1.5em
+		padding-bottom 1.5em
+		display flex 
+		flex-wrap wrap 
+		justify-content space-between
+		border-bottom 1px solid $lightgrey
+		align-items center
+	&__info
+		width 48%
+		+below(xs)
+			width 100%
+	&__pics
+		width 48%
+		+below(xs)
+			width 100%
+		ul
+			display flex
+			margin 0
+			list-style-type none
+			justify-content space-between
+		li 
+			width 30%
+			margin 0
+			cursor pointer
+			img 
+				width 100%
+	&__block-title
+		display flex
+		align-items center
+		margin-bottom 1em
+		svg.icon
+			margin-right 1em
+			width 1.5em
+			height 1.5em
+		h4
+			margin 0
+			&:before 
+				display none
+	&__text
+		+below(xs)
+			margin-bottom 1em
+	
+	

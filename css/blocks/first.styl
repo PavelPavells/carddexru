@@ -1,0 +1,36 @@
+.first
+    display flex     
+    align-items center
+    padding 0
+    padding-right 0
+    margin-right 0
+    flex-direction column
+    padding-top 0!important
+    +below(sm)
+        padding-top 4em!important
+    .video-wrapper
+        width 100%
+        // opacity 0
+    &__cat-wrapper
+        width 100%
+        display none
+        border-bottom 1px solid $grey
+        position relative
+        +below(sm)
+            display none
+    &__cat-list
+        display inline-flex
+        padding 15px 
+    &__cat-item
+        a
+            display flex 
+            flex-direction column
+            align-items center 
+            max-width 120px
+            text-align center
+            margin-right 30px 
+            margin-left 30px
+            .icon
+                height 1.6em
+                width 1.6em
+                

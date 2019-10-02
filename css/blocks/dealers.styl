@@ -1,0 +1,226 @@
+.dealers
+	&__map
+		height 35vh
+		min-height 400px
+		margin-bottom 40px
+		&>#map
+			height 100%
+	&__row
+		display flex 
+		justify-content space-between
+		margin-bottom 40px
+		flex-wrap wrap
+		>div
+			width 48%
+			+below(sm)
+				width 100%
+				&:not(:last-child)
+					 margin-bottom 30px
+	&__heading
+		display flex
+		align-items center
+		margin-bottom 30px
+		svg
+			margin-right 10px
+		h3 
+			margin 0
+	.international
+		list-style-type none
+		display flex
+		flex-direction column
+		align-items stretch
+		width 100%
+		&__item 
+			display flex
+			align-items baseline
+			flex-direction row
+			>*:not(:last-child)
+				margin-right 30px
+			.country-pic
+				height 20px
+				width 40px
+				margin-right 10px
+			.country-name
+				font-weight 500
+				opacity .6
+				width 100px
+				+below(xs)
+					display none
+			.company-name
+				font-weight 500
+				font-size 20px
+				+below(xs)
+					font-size 14px
+	&__official
+		.icon-map-marker
+			fill #2C75BB
+	&__partners
+		.icon-map-marker			
+			fill #DC4C43
+	.partners
+		display flex 
+		justify-content space-between
+		flex-wrap wrap 
+		position relative
+		.partner
+			width 48%
+			height 80px
+			padding 15px 30px
+			padding-right 40px
+			margin-bottom 18px
+			background-color #efefef
+			font-size 18px 
+			font-weight 500
+			overflow hidden
+			position relative
+			cursor pointer
+			text-decoration none
+			+below(md)
+				width 100%
+			+below(sm)
+				width 48%
+			+below(xs)
+				width 100%
+				
+			.icon-map-marker
+				fill #d8e3f2
+				position absolute
+				height 120px 
+				width 120px
+				right -60px
+				bottom -25px
+				transition all .2s ease-in-out
+			&:hover
+				.icon-map-marker
+					height 40px
+					width 40px
+					bottom 50%
+					right 5px
+					transform translateY(50%)
+			&.partner-big
+				width 100%
+				display flex
+				align-items center
+				justify-content center
+				.icon-map-marker
+					fill #c89eea
+					
+		.partner__cities 
+			full-fill()
+			height 100%
+			width 50%
+			background-color white
+			padding 30px
+			box-shadow 0 0 5px 3px rgba(0, 0, 0, .1)
+		.partner__popover-close
+			position absolute
+			top 20px 
+			right 20px
+			cursor pointer
+			font-size 20px
+		.partner__cities-list-wrapper
+			width 90%
+			height 100%
+			position relative 
+			.ps__rail-x, .ps__rail-y
+				opacity .6	
+		.partner__cities-list 
+			display flex 
+			flex-direction column
+			list-style-type none
+			margin 0
+
+		.partner__city
+			margin-right 20px
+			margin-left 0
+			margin-top 2px
+			margin-bottom 2px 
+			font-size 14px
+			font-weight 500
+			cursor pointer
+			&:last-child
+				margin-bottom 20px
+			&:hover
+				text-shadow 0 0 .5px currentColor, 0 0 .5px currentColor
+		.partner__single-city
+			full-fill()
+			height 100%
+			max-width 50%
+			transform translateX(102%)
+			background-color white
+			box-shadow 0 0 5px 3px rgba(0, 0, 0, .1)
+			padding 30px
+			h4
+				margin-top 0
+				margin-bottom 10px
+			&:before
+				content ''
+				width 0
+				height 0
+				border-top 10px solid transparent
+				border-bottom 10px solid transparent
+				border-right 10px solid white
+				position absolute
+				top 50%
+				left 0
+				transform translate(-50%, -100%)
+		.organizations 
+			position relative
+			max-height 90%
+			&__list
+				height auto
+			.ps__rail-x, .ps__rail-y
+				opacity .6	
+			&__list
+				list-style-type none
+				margin 0
+			.organization
+				border-bottom 1px solid $grey
+				&__name 
+					font-size 18px
+					font-weight bold
+					margin-bottom 20px
+				&__adress
+					margin-bottom 10px
+				&__email
+					margin-bottom 10px
+				&__phone
+					margin-bottom 10px
+				&__map
+					text-transform underline
+					margin-bottom 10px
+					color #323cc3
+					cursor pointer
+					&:hover 
+						text-decoration underline
+	.dealers
+		&__list
+			list-style-type none 
+		.dealer
+			margin-left 0
+			font-size 14px
+			font-weight 500
+			display flex
+			margin-left 0
+			&:hover
+				.dealer__name
+					text-shadow 0 0 .5px currentColor, 0 0 .5px currentColor
+			&__link
+				display flex
+				white-space nowrap
+				width 100%
+			&__name
+				text-decoration none
+				display inline-block
+				min-width 60%
+				margin-right 20px
+
+.ymaps-icon
+	full-fill()
+	width 32px
+	height 32px
+.icon-map-marker.map-partner
+	fill #2C75BB	
+	
+.icon-map-marker.map-dealer
+	fill #DC4C43

@@ -1,0 +1,292 @@
+.chronology
+	padding-top 0
+	&__title 
+		margin-top 0
+	&__timeline
+		display flex 
+		flex-wrap wrap
+		justify-content center
+		margin-top 2em
+		.chronology-item
+			width 23%
+			margin-right 2%
+			margin-bottom 40px
+			&__text
+				font-size 11px
+				color #272020
+				font-weight 500
+				position relative
+				padding-right 1em
+				+above(lg)
+					font-size 14px
+				+above(xl)
+					font-size 16px
+				&:before
+					content ''
+					display none
+					width 1px
+					height 70px
+					background-color black
+					top 100%
+					left 30px
+					position absolute
+					z-index -1
+			&__year 
+				font-size 33px 
+				font-weight 600
+				color #969292
+				margin-left 30px
+				position relative
+				margin-bottom 20px
+				&:before
+					content ''
+					display block
+					width 50px
+					height 50px
+					position absolute 
+					top 50%
+					left 0 
+					transform translate(-50%, -50%)
+					background-color #b4ccdc
+					border-radius 50%
+					z-index -1
+				&:after
+					content ''
+					z-index -2
+					position absolute
+					width calc(109% + 30px)
+					height 1px
+					bottom 0 
+					left 0
+					background-color #000
+			&:nth-child(4), &:nth-child(5), &:nth-child(12)
+				.chronology-item__year:after
+					display none 
+			&:nth-child(4n)
+				.chronology-item__text:before
+					display block
+			&:nth-child(12)
+				.chronology-item__text:before
+					display none
+			&:nth-child(13)
+				.chronology-item__year:after
+					content ''
+					background-color transparent
+					border 1px solid black
+					border-width 0 1px 1px 0
+					width 185%
+					height 70px
+			&:nth-child(-n+4)
+				order 1
+			&:not(:nth-child(-n+8))
+				order 9
+			&:nth-child(5)
+				order 8
+			&:nth-child(6)
+				order 7
+			&:nth-child(7)
+				order 6
+			&:nth-child(8)
+				order 5
+			+below(md)
+				width 31%
+				margin-right 2%
+				&:nth-child(-n+3)
+					order 1
+				&:nth-child(4)
+					order 6
+				&:nth-child(5)
+					order 5
+				&:nth-child(6)
+					order 4
+				&:nth-child(7)
+					order 7
+				&:nth-child(8)
+					order 8
+				&:nth-child(9)
+					order 9
+				&:nth-child(10)
+					order 12
+				&:nth-child(12)
+					order 10
+				&:nth-child(11)
+					order 11
+				&:nth-child(13)
+					order 13
+				&:nth-child(4), &:nth-child(5), &:nth-child(12)
+					.chronology-item__year:after
+						display block
+				&:nth-child(3), &:nth-child(4), &:nth-child(9), &:nth-child(10)
+					.chronology-item__year:after	
+						display none
+				&:nth-child(4n)
+					.chronology-item__text:before
+						display none
+				&:nth-child(3n)
+					.chronology-item__text:before
+						content ''
+						display block
+						width 1px
+						height 50px
+						background-color black
+						top 100%
+						left 30px
+						position absolute
+						z-index -1
+				&:nth-child(12)
+					.chronology-item__text:before
+						display none
+				&:nth-child(13)
+					.chronology-item__year:after
+						content ''
+						background-color transparent
+						border 1px solid black
+						border-width 0 0 1px 1px
+						width calc(100% + 30px)
+						height 90px
+						right 100%
+						left auto
+			+below(xs)
+				width 48%
+				margin-right 2%
+				&:not(:nth-child(2n))
+					.chronology-item__text:before
+						display none
+				&:nth-child(2n)
+					.chronology-item__text:before
+						display block
+				&:nth-child(12)
+					.chronology-item__text:before
+						display none
+				&:nth-child(3), &:nth-child(4), &:nth-child(9), &:nth-child(10)
+					.chronology-item__year:after	
+						display block
+				&:nth-child(1)
+					order 1
+				&:nth-child(2)
+					order 2
+					.chronology-item__year:after
+						display none
+				&:nth-child(3)
+					order 4
+					.chronology-item__year:after
+						display none
+				&:nth-child(4)
+					order 3
+				&:nth-child(5)
+					order 5
+				&:nth-child(6)
+					order 6
+					.chronology-item__year:after
+						display none
+				&:nth-child(7)
+					order 8
+					.chronology-item__year:after
+						display none
+				&:nth-child(8)
+					order 7
+				&:nth-child(9)
+					order 9
+				&:nth-child(10)
+					order 10
+					.chronology-item__year:after
+						display none
+				&:nth-child(11)
+					order 12
+					.chronology-item__year:after
+						display none
+				&:nth-child(12)
+					order 11
+				&:nth-child(13)
+					width 70%
+					.chronology-item__year:after
+						content ''
+						background-color transparent
+						border 1px solid black
+						border-width 0 0 1px 1px
+						width 20%
+						height 90px
+						right 100%
+						left auto
+			+below(400px)	
+				.chronology-item__year
+					font-size 22px
+	
+.chronology
+	&__slider
+		display flex
+		align-items center
+		justify-content center
+		overflow hidden
+		position relative
+		margin-top 2em
+		&:before
+			content ''
+			position absolute 
+			height 100%
+			top 0
+			left -1px
+			width 30px
+			background linear-gradient(to right, rgba(249,249,249,1) 0%,rgba(249,249,249,0) 100%)
+			z-index 4
+			+below(sm)
+				display none
+		&:after 
+			content ''
+			position absolute 
+			height 100%
+			top 0
+			right -1px
+			width 30px
+			background linear-gradient(to right, rgba(249,249,249,0) 0%,rgba(249,249,249,1) 100%)
+			z-index 4
+			+below(sm)
+				display none
+	&__slider-list
+		margin 0
+		display block
+		position relative 
+		width 100%
+	&__slide
+		margin 0
+		list-style-type none
+		cursor pointer
+		set('height', 160px n 250px 350px)
+		overflow hidden
+		position relative
+		img
+			position absolute
+			width 100%
+			height auto 
+			top 50%
+			left 0
+			transform translateY(-50%)
+	.owl-carousel 
+		.owl-stage-outer
+			overflow visible
+	.owl-item 
+		opacity .3
+		transition opacity .2s ease-in-out
+	.owl-item.active
+		opacity 1
+	.owl-arrow-left, .owl-arrow-right
+		position absolute!important
+		bottom 50%
+		z-index 5
+		cursor pointer
+		+below(md)
+			display block
+	.owl-arrow-left
+		arrow(4px, black, 15px, 30px, 'left')
+		transform translateY(50%)
+		left 10px
+		&.disabled
+			opacity .3
+	.owl-arrow-right
+		arrow(4px, black, 15px, 30px, 'left')
+		transform rotate(180deg) translateY(-50%)
+		right 10px
+		&.disabled
+			opacity .3
+		
+	

@@ -1,0 +1,48 @@
+.soft
+	position relative
+	display flex
+	flex-direction row
+	justify-content space-between
+	align-items center
+	+below(xs)
+		flex-direction column
+		align-items flex-start
+	&__title
+		margin-left 72px
+		+below(sm)
+			margin-left auto
+	&__images
+		position relative
+		margin-left 80px
+		margin-right auto
+		+below(sm)
+			margin-left auto
+		img
+			height 670px
+			margin-bottom -170px
+			+below(lg)
+				height 450px
+
+			+below(md)
+				height 350px
+				
+			+below(xs)
+				height 250px
+				margin-top 40px
+				margin-bottom 0
+
+	&__text
+		padding-left 70px
+		align-self center	
+		font-size 16px
+		margin-top 30px
+		text-align left
+		display flex
+		flex-direction column
+		+below(xs)
+			padding-left 0
+		
+	.btn-primary 
+		margin-left 70px
+		
+				

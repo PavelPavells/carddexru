@@ -1,0 +1,76 @@
+.company
+	&__title
+		margin-top 0
+	&__text
+		font-size 12px
+		+above(lg)
+			font-size 14px
+		+above(xl)
+			font-size 16px 
+		p, ul, li
+			font-weight 500
+	&__video-wrapper
+		position relative
+		overflow hidden
+		margin-bottom 1em
+	&__video-button
+		position absolute
+		min-height 100%
+		min-width 100%
+		background-image url('/assets/images/company1.jpg')
+		background-size cover
+		border none
+		z-index 4
+		top 0 
+		left 0
+		cursor pointer
+		svg
+			width 100px 
+			height 100px			
+			fill red
+			opacity .7
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+	&__slider
+		display none
+		width 100%
+		margin 0
+		position relative
+		
+		.owl-arrow-left, .owl-arrow-right
+			position absolute!important
+			bottom 50%
+			z-index 5
+			cursor pointer
+			+below(md)
+				display block
+		.owl-arrow-left
+			arrow(4px, black, 15px, 30px, 'left')
+			transform translateY(50%)
+			left 10px
+			&.disabled
+				opacity .3
+		.owl-arrow-right
+			arrow(4px, black, 15px, 30px, 'left')
+			transform rotate(180deg) translateY(-50%)
+			right 10px
+			&.disabled
+				opacity .3
+	&__slider-list
+		margin 0
+	&__slide
+		margin 0
+		list-style-type none
+		cursor pointer
+		set('height', 200px n 300px 500px)
+		overflow hidden
+		position relative
+		img
+			position absolute
+			width 100%
+			height auto 
+			top 50%
+			left 0
+			transform translateY(-50%)

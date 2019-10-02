@@ -1,0 +1,32 @@
+.modal
+    width 100%
+    // max-width 1000px
+    display inline-block
+    background-color white
+    overflow hidden
+    position relative
+    cursor default
+    vertical-align middle
+    white-space normal
+    text-align left
+    margin-y 50px
+    box-shadow 0px 0px 20px rgba(#000, 0.5)
+    padding 50px 
+    +below(sm)
+        padding 15px
+        
+    &_wide
+        +above(sm)
+            max-width 1160px
+    &__close
+        z-index 100
+        cross 1px #c4c4c4 50px 50px 50px 50px
+        position absolute
+        left 50px
+        top 50px
+        cursor pointer
+        +below(lg)
+            cross 1px #c4c4c4 30px 30px 30px 30px
+            left 0
+            top 0
+            

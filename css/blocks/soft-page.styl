@@ -1,0 +1,167 @@
+.soft-page
+	&__cats
+		display flex 
+		margin-top 40px
+		align-items flex-start
+		+below(xs)
+			flex-direction column
+	&__intro-text
+		font-weight 500
+	&__tabs
+		padding 25px
+		background-color #eaeae8
+		width 400px
+		margin-right 20px
+		flex-shrink 0
+		+below(md)
+			width 250px
+			margin-right 5px
+		+below(sm)
+			padding 10px
+		+below(xs)
+			width 100%
+		
+	&__body
+		padding 25px
+		background-color #fff
+		box-shadow 0 0 2px 0px rgba(0, 0, 0, .1)
+		align-self stretch
+		flex-grow 10
+		+below(sm)
+			padding 10px
+	&__item
+		font-size 12px 
+		font-weight 500
+		display none
+		h4:first-child
+			margin-top 0
+		p 
+			font-weight 500
+		ul
+			list-style-type none
+			margin-left 0
+			li 
+				display flex
+				align-items center
+				font-weight 500
+				&:before
+					content ''
+					width 10px
+					height 10px
+					border-radius 50%
+					background-color #b4ccdc
+					flex-shrink 0
+					flex-basis 10px
+					margin-right 10px
+					
+	&__tabs-title
+		font-size 24px
+		+below(md)
+			font-size 20px
+	&__tabs-list
+		margin-left 0
+		margin-top 0
+		margin-bottom 0	
+		padding-bottom 20px 
+		padding-bottom 0
+		+below(sm)	
+			padding 0
+	&__tab
+		list-style-type none
+		&:not(:last-child)
+			margin-bottom 10px
+		a
+			padding 15px 45px
+			display flex 
+			align-items center
+			margin-left -25px 
+			margin-right -45px
+			text-decoration none
+			+below(md)
+				padding 10px 25px
+			+below(sm)
+				margin-left -10px
+				margin-right -25px
+			+below(xs)
+				margin-right -10px
+			&.active-tab
+				background-color white
+				box-shadow 0 0 2px 0px rgba(0, 0, 0, .1)
+				font-weight 500
+				&:hover
+					color currentColor
+			svg 
+				height 30px 
+				width 30px
+				flex-shrink 0
+				margin-right 10px
+	&__tabs-title
+		margin-top 0
+	.downloads-cats
+		margin 0
+	.downloads-cat
+		display flex
+		flex-direction column
+		align-items flex-start 
+		margin-left 0
+		&:before
+			display none
+		.downloads-heading
+			display flex
+			align-items center
+			cursor pointer
+			+below(xs)
+				width 100%
+				justify-content space-between
+				.downloads-heading__name
+					margin-right auto
+			&__icon 
+				margin-right 2em
+				svg 
+					width 35px 
+					height 35px
+					fill grey
+					transition all .2s ease-in-out
+			&__name
+				font-weight 500
+				font-size 14px
+				margin-right 2em
+			&__marker
+				arrow(2px, grey, 16px, 8px, 'top')
+				transform rotate(180deg)
+				transition all .2s ease-in-out
+		.downloads-body
+			width 100%
+			display none
+			list-style-type none
+			border-bottom 1px solid #e2e2e2
+			.item
+				display flex
+				align-items center
+				list-style-type none
+				&:before 
+					display none
+			.item-size 
+				margin-right 1em
+				margin-left auto
+			.item-name
+				margin-right 1em
+			.item-icon
+				margin-right 1em
+			.btn-primary 
+				margin-top 0
+				+below(xs)
+					font-size 12px 
+		&.active
+			.downloads-body
+				display block
+			.downloads-heading
+				&__icon 
+					svg 
+						fill red
+				&__marker
+					arrow(2px, red, 16px, 8px, 'top')
+					transform rotate(0deg)
+			
+			
+					

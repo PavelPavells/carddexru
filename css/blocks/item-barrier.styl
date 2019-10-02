@@ -1,0 +1,1054 @@
+.item-page
+    &__info
+        padding-top 75px
+        // padding-bottom 0
+        +below(lg)
+            padding-top 50px
+    &__header
+        display flex
+        align-items center
+        justify-content space-between
+        margin-bottom 6em
+        +below(sm)
+            margin-bottom 4em
+        >.col-xs-12.col-md-6
+            display flex
+            align-items center
+            justify-content space-between
+            &:first-child 
+                +below(sm)
+                    order 2
+            &:last-child 
+                +below(sm)
+                    order 1
+                    margin-bottom 2em
+    &__top
+        display flex    
+        align-items center
+        justify-content space-between
+        margin-bottom 50px
+        +below(sm)
+            flex-wrap wrap
+    &__title
+        margin-top 0
+        margin-bottom 0
+        font-family "GothamProLight"
+        max-width 50%
+        margin-right auto
+        padding-left 0
+        min-height 220px
+        +below(lg)
+            min-height 150px
+        
+        &:before
+            display none
+        +below(sm)
+            max-width 100%    
+            br
+                display none    
+    &__price-block-wrapper
+        min-height 220px
+        display flex 
+        align-items center
+        flex-direction column
+        +below(lg)
+            min-height 150px
+        
+    &__price-list
+        +below(sm)
+            margin-left auto
+        >a
+            margin-right auto
+            display flex
+            align-items center 
+            svg
+                margin-right 0.3em
+    &__catalog-ctrls
+        display flex
+        align-items center
+        >*:not(:last-child)
+            margin-right 1em
+        .item-page__catalog-prev, .item-page__catalog-next
+            width 25px
+            height 25px
+            border 1px solid currentColor
+            border-radius 50%
+            position relative
+            .arrow
+                arrow(1px, currentColor, 8px, 16px, 'left')
+                position absolute
+                top 50%
+                left 50%
+                transform translate(-65%, -50%)
+        .item-page__catalog-next
+            transform rotate(180deg)
+    &__media
+        display flex
+        margin-bottom 1em
+        +below(sm)
+            flex-wrap wrap
+        .left-part
+            width 45%
+            margin-right 4.9999%
+            display flex
+            +below(sm)
+                width 100%
+                flex-direction column
+                margin-right 0
+            +below(1600px)
+                width 40%
+        .right-part
+            width 50%
+            display flex
+            align-items flex-start
+            justify-content space-between
+            margin-left auto
+            +below(sm)
+                width 100%
+            +below(1600px)
+                width 63%
+    &__media-blocks
+        flex-grow 10
+        // margin-right 100px
+        // padding-bottom 100%
+        position relative 
+        +below(sm)
+            margin-right 0
+    &__media-block
+        width 100%
+        position relative
+        padding-y 5%
+        +below(sm)
+            height 90vw
+        >*
+            position absolute
+    &__module-media
+        position relative
+    .item-slider
+        position absolute
+        width 100%
+        // top 50%
+        // left 50%
+        // transform translate(-50%, -50%)
+        // overflow hidden
+        &__prev, &__next
+            position absolute
+            right 20px
+            cursor pointer
+            +below(lg)
+                right 10px
+        &__prev
+            top 20px
+            +below(lg)
+                top 10px
+        &__next 
+            bottom 20px
+            +below(lg)
+                bottom 10px
+        ul 
+            margin 0
+        li 
+            margin 0
+    .item-slide
+        margin 0
+        width 100%
+        // padding-bottom 100%
+        position relative
+        display flex
+        align-items center
+        justify-content center
+        cursor pointer!important
+        
+        
+        img 
+            // position absolute
+            // top 50%
+            // left 50%
+            // transform translate(-50%, -50%)
+            max-width 100% 
+            max-height 100%
+            width auto 
+            height auto
+        &:before
+            content ''
+            position absolute
+            width 115px
+            height 115px
+            top 50%
+            left 50%
+            transform translate(-50%, -50%)
+            background-image: url('/assets/images/lupa.svg') 
+            opacity 0
+            transition opacity .2s ease-in-out
+            z-index 2
+            background-position center center
+            background-size contain
+            background-repeat no-repeat
+        &:hover
+            &:before 
+                opacity .2
+            // .owl-dots
+            //     position absolute
+            //     bottom -30px
+            //     left 50%
+            //     transform translateX(-50%)
+            //     display flex 
+            // .owl-dot
+            //     width 10px
+            //     height 10px
+            //     background-color rgba(128, 128, 128, .5)
+            //     border 2px solid transparent
+            //     border-radius 50%
+            //     margin 10px
+            //     &.active
+            //         border-color $blue
+        ul, li
+            margin 0
+        .lSPager li 
+            display flex 
+            flex-direction column 
+            justify-content center
+    // img
+    //     border 1px solid black  
+    .lSSlideOuter .lSPager.lSGallery li.active, .lSSlideOuter .lSPager.lSGallery li:hover
+        border-radius 0
+        opacity 1
+    .lSSlideOuter .lSPager.lSGallery li 
+        transition all .2s ease-in-out
+        opacity .3
+    &__media-buttons
+        display flex
+        flex-direction column
+        margin-right 30px
+        +below(sm)
+            margin-right 20px
+            flex-direction row
+            justify-content space-between
+            margin-right 0
+        >*
+            margin-bottom 30px
+        a
+            text-decoration none
+            width 40px 
+            height 40px
+            display flex
+            align-items center
+            justify-content space-between
+            svg 
+                width 25px
+                height 25px
+    &__media-button
+        opacity .6
+        transition opacity .2s ease-in-out
+        &:hover
+            opacity 1
+        &.active-tab
+            opacity 1
+            svg
+                fill black
+    .company__video-button
+        background-position center center
+        svg 
+            fill #fff
+    &__base-info
+        display flex
+        align-items flex-start
+        flex-direction column
+        padding-bottom 40px
+        // border-bottom 1px solid #E8E8E8
+        margin-bottom 40px
+        +below(xs)
+            flex-wrap wrap 
+        +below(1600px)
+            padding-bottom 20px
+            margin-bottom 20px
+    &__info-del
+        width 1px
+        height 60px
+        background-color #E8E8E8
+        margin-left auto
+        margin-right auto
+        +below(sm)
+            display none
+
+    &__base-price
+        display flex
+        align-items center
+        justify-content space-between
+        flex-wrap wrap
+        +below(sm)
+            margin-top 4em
+    &__price
+        font-size 36px
+        font-family "GothamProLight"
+        // margin-left 8px
+        +below(sm)
+            font-size 30px  
+    &__more-info
+        display flex
+        flex-direction column
+        align-items flex-end
+    &__price-list
+        margin-bottom 5em
+        align-self center
+    &__price-block 
+        flex-shrink 0
+        margin-left 1em
+        position relative
+        margin-left 0
+        display flex
+        flex-direction column
+        align-items center
+        +below(sm)
+            margin-bottom 1em
+            margin-right 1em 
+        .btn-primary 
+            marign-top 1em
+            padding-x 72px
+            +below(md)
+                padding-x 55px
+        
+    &__installer
+        display flex 
+        align-items flex-end
+        font-size 11px
+        text-transform uppercase
+        margin-top 5px
+        svg 
+            color #1D68D9
+            margin-right 10px
+            width 28px
+            height 28px
+    &__current-city-installer
+        text-align center
+        +below(sm)
+            margin-top 2em
+        a
+            font-size 24px
+            line-height 32px
+            color #1D68D9
+            font-family "GothamProLight"
+            text-decoration underline
+            
+    &__installer-block 
+        align-self stretch
+        display flex
+        flex-direction column
+        justify-content space-between
+        flex-shrink 0
+        // margin-left 1em
+    &__installator-link
+        display flex 
+        align-items center
+        font-size 1em
+        font-weight 500
+        +below(sm)
+            font-size .8em
+        a
+            display flex
+            align-items center
+            margin-left auto
+            svg
+                width 40px
+                height 40px
+                margin-right 10px
+    &__advantages
+
+        display flex
+        align-items flex-start
+        flex-direction column
+
+        +below(sm)
+            margin-bottom 2em
+    &__advantages-title
+        margin-top 0
+        font-size 18px
+        color #8B9298
+        font-family "GothamProLight"
+    &__advantages-list
+        list-style-type none
+        justify-content space-between
+        display flex 
+        flex-wrap wrap
+        margin 0
+
+    &__advantage 
+        display flex
+        align-items center
+        font-weight 400
+        font-size 16px 
+        color #191E22
+        width 100%
+        margin-y 0
+        margin-bottom 1.5em
+        span 
+            max-width 280px
+            line-height 1.5em
+        +below(sm)
+            font-size 12px
+            width 100%
+        +below(1600px)
+            font-size 12px
+        svg 
+            flex-shrink 0
+            color #1D68D9
+            width 35px
+            height 35px
+            margin-right 20px
+            border 2px solid currentColor
+            border-radius 50%
+            padding 2px
+            flex-shrink 0
+            fill #1D68D9
+            +below(1600px)
+                width 28px
+                height 28px
+    &__description-header
+        padding-top 2em
+        padding-bottom 2em
+        background-color rgba(232, 232, 232, 0.7)
+        padding-x 50px
+        +below(md)
+            padding-x 40px
+        +below(sm)
+            padding-x 40px 
+    &__description-nav
+        margin 0
+        display flex
+        list-style-type none
+        align-items center
+        justify-content space-around
+        padding-right 20%
+
+    &__description-link
+        font-size 18px
+        margin-right 20px
+        color #8B9298
+        cursor pointer
+        text-decoration none
+        +below(md)
+            padding-y 10px
+        &:hover, &:focus
+            font-family "GothamProMedium"
+            color #191E22
+            
+        &.active-tab
+            font-family "GothamProMedium"
+            color #191E22
+            cursor default
+    &__description
+        display flex
+        flex-shrink 1
+        padding-top 0
+        padding-bottom 50px
+        +below(sm)
+            flex-wrap wrap
+        h2 
+            margin-top 1em
+        .company__video-wrapper
+            margin-bottom 0
+            margin-top 36px
+            +below(lg)
+                margin-top 26px
+    &__description-content
+        flex-shrink 1
+        flex-grow 1
+    &__description-content-block
+        position relative
+        // display none    
+        height 100%
+    &__description-video
+        width 60%
+        flex-shrink 0
+        +below(sm)
+            width 100%
+            margin-top 3em
+            margin-left 0
+    &__description-text-wrapper, &__description-text-wrapper-2, &__description-text-wrapper-3, &__description-text-wrapper-4, &__description-text-wrapper-5
+        position absolute
+        top 0 
+        let 0 
+        width 100%
+        height 100%
+        
+        overflow scroll
+        +below(sm)
+            max-height 200px
+        &.expanded
+            max-height none     
+            
+    &__description-text 
+        font-size 14px
+    &__special-list 
+        list-style-type none 
+        margin 0 
+        padding 0
+    &__special-item
+        display flex
+        align-items center
+        margin-y 1em
+        font-size 16px
+        +below(lg)
+            font-size 12px
+    &__special-plus
+        display block
+        border-radius 50%
+        background-color black
+        position relative
+        width 24px 
+        height 24px
+        margin-right 1em
+        +below(lg)
+            width 12px 
+            height 12px
+        +below(sm)
+            width 10px
+            height 10px
+        &:before, &:after
+            content ''
+            position absolute
+            width 8px 
+            height 1px
+            background-color white
+            top 50%
+            left 50%
+            transform translate(-50%, -50%)
+            +below(sm)
+                width 4px
+        &:after
+            transform translate(-50%, -50%) rotate(90deg)
+    .docs
+        &__item
+            color #1D68D9
+            display flex
+            align-items center
+            margin-y 1em
+            text-decoration none
+            // font-size 24px
+            +below(sm)
+                font-size 16px 
+        &__list
+            margin 0 
+            padding 0
+        &__icon 
+            margin-right 1em
+            .icon
+                width 36px
+                height 34px
+    .d3
+        &__item
+            display flex
+            align-items flex-start
+            margin-y 1em
+            font-size 18px
+            margin-right 1em
+            +below(sm)
+                font-size 14px
+                justify-content space-between
+            +below(1600px)
+                font-size 14px
+        &__size 
+            opacity .5          
+            
+        &__icon
+            margin-right 20px
+        &__name
+            width 260px
+            max-width 50%
+            margin-right 30px
+            margin-bottom 1.2em
+
+            +below(sm)
+                width auto
+        .btn-primary
+            margin-top 0
+            // margin-left auto
+            
+    &__specs-list
+        margin 0
+        padding 0
+    &__specs-item
+        display flex
+        align-items flex-end
+        margin-y 1em    
+        font-size 16px
+        +below(sm)
+            flex-wrap wrap
+        +below(1600px)
+            font-size 12px
+    &__specs-name 
+        color #8B9297
+        flex-shrink 0
+        +below(sm)
+            width 100%
+    &__specs-del
+        flex-shrink 10
+        border-bottom 1px dotted #8B9298
+        width 100%
+        
+    &__specs-value
+        width 30%
+        margin-left 2%
+        flex-shrink 0
+        +below(sm)
+            width 100%
+    &__colors-title 
+        margin-top 3em
+        color #8B9297
+        font-size 16px
+        margin-bottom 1em
+    &__color
+        display inline-flex
+        align-items -items center
+        margin-right 40px 
+        margin-bottom 1em
+        .color-body 
+            width  30px
+            height  30px
+            border-radius 50%
+            margin-right 20px
+            box-shadow inset 0 4px 0px 0px rgba(0, 0, 0, .3)
+    // &__modules
+        // position relative
+    &__modules-list
+        position relative
+        display flex
+        flex-wrap wrap
+        align-items stretch 
+        list-style-type none
+        padding 0 
+        margin 0
+    &__module 
+        width 100%
+        border 1px solid #E8E8E8
+        margin 0
+        padding 35px 
+        text-decoration none
+        display flex
+        flex-direction column
+        
+        transition all .2s ease-in-out
+        +above(sm)
+            width 49.999999999%
+        +above(md)
+            width 33.333333333%
+        &:hover
+            transform translateY(-2px)
+            box-shadow 0px 2px 5px 0px rgba(0,0,0,0.3);
+            .item-page__module-arrow
+                width 120px
+                color black
+            
+    &__module-image
+        height 250px
+        margin-bottom 50px 
+        img
+            max-height 100%
+            width auto
+    &__module-subtitle
+        font-size 15px
+        margin-bottom 18px
+    &__module-title 
+        fotn-size 24px 
+        font-family "GothamProLight"
+        color #1D68D9
+        margin-bottom 60px
+    &__module-price
+        font-size 24px
+        padding-bottom 10px
+        border-bottom 1px solid #e8e8e8 
+        margin-bottom 15px  
+        font-family "GothamProLight"
+        +below(sm)
+            font-size 16px
+    &__module-price
+        display flex
+        justify-content space-between
+    &__module-more
+        margin-bottom 4em
+    &__module-arrow
+        align-self flex-end
+        margin-top auto
+        margin-bottom 20px
+        
+        height 1px
+        width 70px
+        
+        color #BCCBD7 
+        transition all .2s ease-in-out
+        background-color currentColor
+        position relative
+        &:before, &:after
+            content ''
+            position absolute
+            right 0
+            width 35px
+            background-color currentColor 
+            height 1px
+        &:before
+            transform rotate(45deg) translate(-3px, -13.6px)
+        &:after
+            transform rotate(-45deg) translate(-3px, 13.6px)
+    &__assemblies-header
+        color white
+        background-color #191e22
+        padding-y 4em
+        display flex
+        justify-content space-between
+        align-items center
+        font-family "GothamProLight"
+        h2 
+            color white
+            margin-top 0
+    &__assemblies-h-r
+        flex-shrink 0
+        margin-left 10%
+        margin-right 10%
+    &__assemblies-list
+        margin 0
+        li 
+            margin 0
+    .assemblies
+        padding-top 2em
+        &__tab-list
+            display flex
+            flex-wrap wrap
+            justify-content space-between
+        &__tab-item
+            width 48%
+            padding 1.5em
+            padding-bottom 2.5em 
+            border-bottom 2px solid #191E22
+            margin-bottom 1em
+            font-size 18px 
+            opacity .3
+            transition all .2s ease-in-out
+            text-decoration none
+            +above(sm)
+                width 21%
+            +below(sm)
+                font-size 12px 
+                padding-bottom 1em
+                padding .5em
+            &.active-tab, &:hover
+                opacity 1
+                color black
+        .assembly
+            display flex 
+            justify-content space-between
+            align-items center
+            +below(sm)
+                flex-wrap wrap
+            &__price
+                font-size 36px
+                font-family "GothamProLight"
+                margin-bottom 1.5em
+            &__description
+                font-size 15px
+                max-height 150px
+                min-height 150px
+                overflow-y scroll
+                position relative
+                strong
+                    font-family "GothamProRegular"
+                p
+                    font-family "GothamProLight"
+                
+            &__text
+                width 30%
+                +below(sm)
+                    width 100%
+            &__image
+                width 30%
+                +below(sm)
+                    width 100%
+            .lSSlideWrapper
+                width 350px
+                // .item-slide 
+                //     width 350px
+                //     img
+                //         // width 100%
+                //         width 350px
+                //         height auto
+            &__advantages-list
+                width 25%
+                margin-left 130px
+                +below(lg)
+                    margin-left 100px
+                +below(sm)
+                    width 100%
+            &__advantage-text
+                font-size 18px 
+                color #191E22
+                +below(lg)
+                    font-size 14px
+            &__advantage 
+                display flex
+                align-items center
+                margin-y 1.3em
+                .item-page__special-plus
+                    margin-right 20px       
+                    
+            // .item-slider
+            //     width 420px
+            //     height 420px
+            //     +below(lg)
+            //         width auto 
+            //         height auto
+        
+    &__related-list
+        list-style-type none
+        padding 0 
+        margin 0
+    &__related-item
+        display flex
+        flex-direction column 
+        align-items center   
+        a
+            text-decoration none  
+        .related__name
+            color #1D68D9
+            font-size 18px
+            padding-x 5%
+            
+            text-align center
+        .related-images
+            height 250px
+            display flex 
+            justify-content center
+            img
+                height 100%
+                width auto 
+    .soft__title
+        position relative 
+        &:after
+            content 'Бесплатно'
+            position absolute 
+            top -45px
+            background-color #1D68D9
+            padding 2px 9px
+            display block
+            color white
+            border-radius 10px
+            font-size 16px
+            line-height 1em    
+.installer-section
+    padding 0
+    height 80vh
+    position relative
+    z-index -1
+    &__map
+        position absolute
+        width 100%
+        height 100%
+        top 0 
+        left 0
+        z-index 1
+        background-color green
+    .installer-info
+        position absolute 
+        background-color rgba(255, 255, 255, .9)
+        top 0 
+        left 0
+        z-index 2
+        width 30%
+        height 100%
+        padding-top 75px
+        padding-left 75px
+        +below(lg)
+            padding-left 49px
+        +below(md)
+            padding-left 40px
+        +below(sm)
+            padding-left 15px
+        &__list
+            max-height 65%
+            overflow-y scroll
+            padding-top 75px
+            list-style-type none
+            padding 0 
+            margin 0 
+            position relative
+            padding-right 15px
+        &__title
+            font-size 32px
+            font-family "GothamProLight"
+            margin-bottom 50px
+            +below(lg)
+                font-size 24px
+            
+            a
+                text-decoration none
+                color #1d68d9
+                &:hover
+                    border-bottom 1px solid currentColor
+                    text-decoration none
+            svg
+                width 16px
+                height 16px
+                fill #1d68d9
+        .installer  
+            padding 0 
+            margin 0 
+            margin-bottom 3em
+            font-size 16px
+            +below(lg)
+                font-size 14px
+            >*
+                margin-bottom 1em
+                display flex
+                align-items flex-start
+                font-family "GothamProLight"
+                svg
+                    width 25px
+                    height 25px
+                    margin-right 25px
+            &__name
+                font-size 18px
+                font-family "GothamProRegular"
+                +below(lg)
+                    font-size 16px
+                
+    
+    
+        
+.soft.item-soft
+    background-color #191E22
+    color white
+    z-index -1
+    .soft__title
+        color white
+        margin-bottom 1em
+    .soft__text
+        line-height 1.5em
+    .soft__images 
+        padding-left 50px
+        padding-right 50px 
+        img
+            height 435px
+            margin-bottom 0
+            +below(1600px)
+                height 240px
+.soft
+    .btn-more
+        margin-left 70px 
+        display flex
+        align-items center
+        text-decoration none
+        .icon 
+            margin-left 10px
+            width 15px
+            height 15px
+            color inherit
+            fill currentColor
+
+
+.master
+    display flex
+    align-items center
+    flex-direction column 
+    padding-y 60px
+    background-color #191E22
+    .btn-primary
+        margin-bottom 3em   
+        margin-top 0
+    p
+        text-align center
+        color white
+        margin 0
+            
+            
+            
+                
+// .modal
+//     min-width 100%
+.module
+    box-shadow 0px 2px 5px 0px rgba(0,0,0,0.3)
+    display flex
+    padding-x 100px
+    padding-y 50px
+    width 100%
+    flex-direction row
+    align-items flex-start
+    font-family 'GothamProRegular'
+    justify-content center
+    position absolute
+    // top 50%
+    top 0
+    left 0
+    right 0
+    background-color white
+    // transform translateY(-50%)
+    +below(lg)
+        padding-x 50px
+        padding-y 25px
+    &__title
+        margin-top 1em 
+        margin-bottom 1em
+        font-size 1.3em
+        font-weight 700
+    .module-del
+        height 1px
+        background-color #e8e8e8
+        margin-y 1em
+    &__name 
+        font-size 24px
+        font-family "GothamProLight"
+        margin-bottom 1em
+        color #1D68D9
+    &__price
+        font-size 36px
+        font-family "GothamProLight"
+    &__images
+        width 35%
+        margin-right 5%
+        flex-shrink 0
+        // .item-slider 
+        //     width 400px
+        img
+            height 100% 
+            width auto 
+    &__row
+        display flex
+    &__description 
+        max-height 65vh
+        overflow scroll
+        position relative
+        padding-right 30px
+        ul
+            list-style-type none
+            li 
+                position relative 
+                color #8B9298
+                &:before
+                    content ''
+                    background-color #8B9298
+                    width 8px
+                    height 1px
+                    position absolute
+                    color #8B9298
+                    top .6em
+                    left -20px
+                    
+    &__col
+        width 50%
+        padding 10px
+        border 1px solid rgba(0, 0, 0, .2)
+        >*:first-child
+            margin-top 0
+    &__close
+        z-index 100
+        cross 1px #c4c4c4 50px 50px 50px 50px
+        position absolute
+        left 20px
+        top 20px
+        cursor pointer
+        +below(lg)
+            cross 1px #c4c4c4 30px 30px 30px 30px
+            left 10
+            top 10
+.item-page__description-text-wrapper-2, .item-page__description-text-wrapper, .item-page__description-text-wrapper-3, .item-page__description-text-wrapper-4, .item-page__description-text-wrapper-5 
+    padding-right 15px
+
+// .ps__thumb-y
+    // transition-property all

@@ -1,0 +1,230 @@
+$red = #D03839
+
+html
+	height 100%
+	width 100%
+	min-width 320px
+	padding 0px
+	margin 0px
+	position relative
+	&.scroll-locked
+		overflow hidden
+		body
+			overflow hidden
+body
+	height 100%
+	width 100%
+	padding 0px
+	margin 0px
+	set('font-size', 14px n n n 16px n)
+	line-height 1.2
+	color $baseFontColor
+	min-width 320px
+	position relative
+	background-color #f9f9f9
+	font-family 'GothamProRegular'
+.body
+	display flex
+	position relative
+	flex-direction column
+	justify-content space-between
+	min-height 100%
+	padding 0px
+	margin 0px
+	&__content
+		flex 1 1 auto
+		position relative
+		z-index 0
+		margin-left 115px
+		background-color #fff
+		font-family 'GothamProRegular'
+		overflow hidden
+		display flex
+		flex-direction column
+		min-height 100vh
+		justify-content space-between
+		+above(xl)
+			margin-left 115px
+		+below(sm)
+			margin-left 0
+	.footer, .header
+		flex 0 0 auto
+
+.global-overlay
+	position fixed
+	left 0px
+	right 0px
+	top 0px
+	bottom 0px
+	width 100%
+	height 100%
+	z-index 1999
+	display none
+	background-color rgba(#000,0.5)
+	
+p, ul, ol, table
+	margin 0px
+	padding 0
+	margin-y 1em
+	font-weight 300
+	+above(xl)
+		margin-y 1.5em
+ol, ul
+	margin-left 20px
+li
+	margin 0
+	margin-y 5px
+	+above(md)
+		margin-y 10px
+
+a
+	text-decoration underline
+	display inline
+	color $baseLinkColor
+	&:hover, &:focus
+		color #053b5d
+		text-decoration none
+.a
+	aReset()
+	&:hover, &:focus
+		color lighten($baseFontColor, 20%)
+
+h1, h2, h3, h4, h5, h6, .title
+	color $baseFontColor
+	line-height 1.28em
+	margin-top 1.8em
+	margin-bottom 1.4em
+	font-weight 600
+	+below(xs)
+		margin-bottom .8em
+h1, .title
+	font-size 24px
+	margin-top 0.75em
+	+above(sm)
+		margin-top 0.3em
+		font-size 36px
+	+above(md)
+		margin-top 0.2em
+		font-size 48px
+	+above(xl)
+		font-size 64px
+h2
+	font-size 32px
+	+above(md)
+		font-size 26px
+	+above(sm)
+		font-size 22px
+	+above(xl)
+		font-size 36px
+h3
+	font-size 18px
+	+above(sm)
+		font-size 20px
+	+above(md)
+		font-size 24px
+	+above(xl)
+		font-size 30px
+		
+h4, h5, h6
+	font-size 16px
+	+above(sm)
+		font-size 18px
+	+above(md)
+		font-size 20px
+	+above(xl)
+		font-size 24px
+	
+.rouble
+	font-family $ptr
+.hidden
+	display none !important
+.img
+	display block
+	max-width 100%
+	width auto !important	
+	
+.table
+	overflow auto
+	margin-y 15px
+	+above(lg)
+		margin-y 20px
+	+above(xl)
+		margin-y 25px
+	&>table
+		width 100%
+		margin 0
+	&__active
+		background-color #dddddd
+table
+	border-collapse collapse
+
+.touchevents
+	.link, .overlay
+		cursor pointer !important
+			
+.clearfix
+	clearfix() 
+	
+.icon
+	height 1em 
+	width 1em
+
+
+section 
+	height auto
+	padding 75px
+	padding-y 150px
+	overflow hidden
+	+below(lg)
+		padding 50px
+		padding-y 120px
+	+below(md)
+		padding 40px
+		padding-y 100px
+	+below(sm)
+		padding 40px 15px
+	&>h2
+		margin-top 0
+		
+	// &.grey-bg
+	// 	background-color rgba(188, 203, 215, .08)
+	// &.big-section
+	// 	padding-right 50px 
+	// &:first-of-type
+	// 	padding-top 100px
+	// 	+below(lg)
+	// 		padding-top 80px
+	// 	+below(md)
+	// 		padding-top 60px
+		
+
+h2
+	font-size 36px
+	font-family 'GothamProLight'
+	font-weight 300
+	color #272020
+
+	+below(md)
+		font-size 32px
+	+below(xs)
+		font-size 26px 	
+			
+
+textarea 
+	resize none
+	
+
+
+		
+
+input, textarea 
+	width 100% 
+	border-radius 10px 
+	background-color transparent
+	border 1px solid #d3d3d3
+	font-size 18px 
+	padding 5px 10px
+
+
+a 
+	transition all .2s ease-in-out

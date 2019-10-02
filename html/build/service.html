@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+    @@include('../blocks/head.html', {
+        "title": "Carddex"
+    })
+
+    
+</head>
+<body>
+    <div class="body">
+        @@include('../blocks/header.html')
+        @@include('../blocks/sidebar.html')
+        @@include('../blocks/progress-pointer.html')
+        <div class="body__content">
+            <div class="before"></div>
+            @@include("../blocks/service.html")
+            @@include("../blocks/footer.html")    
+        </div>
+    </div>
+
+    @@include("../blocks/append.html")
+</body>
+</html>

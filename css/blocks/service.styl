@@ -1,0 +1,145 @@
+.service
+    &__title
+        margin-top 0
+    &__text
+        font-weight 500
+    &__img
+        width 100%
+        height auto
+        +below(sm)
+            margin-top 15px
+            margin-bottom 15px
+    &__row
+        display flex
+        flex-wrap wrap
+        justify-content space-between
+        align-items stretch
+    &__7
+        width 59%
+        +below(sm)
+            width 100%
+        &.order-change
+            +below(sm)
+                order 2
+    &__5
+        width 39%
+        +below(sm)
+            width 100%
+        &.order-change
+            +below(sm)
+                order 1
+    &__form
+        display flex
+        flex-wrap wrap 
+        justify-content space-between 
+        padding 30px 15px
+        background-color #fff
+        box-shadow 0 0 3px 1px rgba(0, 0, 0, .2)
+        >label, >div
+            width 48%
+            display inline-block
+            margin-bottom 1.3em
+            +below(xs)
+                width 100%
+            >span
+                margin-bottom 1em
+                display block
+            input 
+                border-radius 0 
+                background-color #efefef
+                border none
+        .submit-label
+            display flex
+            align-items center
+            justify-content center
+            .btn-primary
+                margin-top 0
+                transition all .2s ease-in-out
+        .file-inputs
+            input
+                width 0.1px
+                height 0.1px
+                opacity 0
+                overflow hidden
+                position absolute
+                z-index -1
+                padding 0
+            label
+                width 30px  
+                height 30px 
+                font-size 32px
+                font-weight 600 
+                color #b4ccdc       
+                cursor pointer
+                display inline-flex
+                margin-right 15px
+                transition color .2s ease-in-out
+                align-items center
+                justify-content center
+                position relative
+                margin-left 15px
+                &:hover, &:focus
+                    color black
+                &.has-file
+                    color black
+                .file-label__text
+                    font-size 6px
+                    position absolute
+                    bottom 0
+                    left 50%
+                    transform translate(-50%, 100%)
+    .guarantee
+        background-color #84abc5
+        color white
+        padding 30px 15px
+        height 100%
+        >h4 
+            margin-top 0
+            margin-bottom 2em
+        h4, h5
+            color white
+            margin-bottom .3em
+        h4:before 
+            color white 
+        &__text
+            position relative
+            height 300px
+            padding-right 30px
+            .ps__rail-y
+                background-color rgba(255,255,255, .2)
+                opacity 1
+                border-radius 5px
+            .ps__thumb-y
+                background-color #fff
+                width 11px
+        &__checkbox
+            margin-top 1em
+            user-select none
+            label 
+                position relative
+                display flex 
+                justify-content center
+                align-items center
+                cursor pointer
+                
+            input
+                position absolute
+                opacity 0
+                width 10px
+            .checkboxmark
+                display inline-block 
+                width 1em
+                height 1em
+                border 1px solid #fff
+                position relative
+                margin-right .5em
+                &:before
+                    content '✓'
+                    position absolute
+                    font-size 100%
+                    top 50%
+                    left 50%
+                    transform translate(-50%,-50%)
+                    opacity 0
+            input[type=checkbox]:checked+.checkboxmark:before
+                    opacity 1
